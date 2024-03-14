@@ -40,10 +40,12 @@ jobs:
           apt-get install --no-install-recommends --yes
           ca-certificates curl git
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           fail_ci_if_error: true
           files: ./coverage.xml
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   unittest:
     runs-on: ubuntu-latest
