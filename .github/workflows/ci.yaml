@@ -25,7 +25,7 @@ jobs:
         run: >
           apt-get update &&
           apt-get install --no-install-recommends --yes
-          pandoc python3 python3-coverage python3-ruamel.yaml python3-setuptools git
+          pandoc python3 python3-coverage python3-ruamel.yaml python3-setuptools git ca-certificates curl
       - uses: actions/checkout@v4
       - name: Run build
         run: python3 -m coverage run --branch setup.py build
@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies for Codecov
         run: >
           apt-get install --no-install-recommends --yes
-          ca-certificates curl gpg gpg-agent
+          gpg gpg-agent
       - name: run gpg --version
         run: gpg --version
       - name: run git rev-parse --show-toplevel
