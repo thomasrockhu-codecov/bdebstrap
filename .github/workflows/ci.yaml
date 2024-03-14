@@ -46,6 +46,7 @@ jobs:
         with:
           fail_ci_if_error: true
           files: ./coverage.xml
+          root_dir: ./
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
