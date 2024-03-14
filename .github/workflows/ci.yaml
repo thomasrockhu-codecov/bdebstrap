@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies for Codecov
         run: >
           apt-get install --no-install-recommends --yes
-          ca-certificates curl git gpg
+          ca-certificates curl git gpg gpg-agent
       - name: run gpg --version
         run: gpg --version
       - name: run Codecov local
