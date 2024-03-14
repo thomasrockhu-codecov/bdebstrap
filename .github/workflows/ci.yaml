@@ -41,8 +41,6 @@ jobs:
           gpg gpg-agent
       - name: run gpg --version
         run: gpg --version
-      - name: run git rev-parse --show-toplevel
-        run: git rev-parse --show-toplevel
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
