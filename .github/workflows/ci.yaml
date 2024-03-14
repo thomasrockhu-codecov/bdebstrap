@@ -38,9 +38,7 @@ jobs:
       - name: Install dependencies for Codecov
         run: >
           apt-get install --no-install-recommends --yes
-          ca-certificates curl git
-      - name: gpg version
-        run: gpg --version
+          ca-certificates curl git gpg
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
